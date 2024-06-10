@@ -28,8 +28,8 @@ class TestConcert:
         assert concert.date == "Nov 15"
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     concert.date = 15
+        with pytest.raises(Exception):
+             concert.date = 15
 
     def test_date_has_length(self):
         """dates are longer than 0 characters"""
@@ -40,12 +40,12 @@ class TestConcert:
         assert len(concert.date) > 0
 
         # comment out the next two lines if using Exceptions
-        concert.date = ""
-        assert concert.date == "Nov 5"
+        #concert.date = ""
+        #assert concert.date == "Nov 5"
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     concert.date = ""
+        with pytest.raises(Exception):
+            concert.date = ""
 
     def test_has_venue(self):
         """Concert is initialized with a venue"""
@@ -62,14 +62,14 @@ class TestConcert:
         concert = Concert(date="Nov 5", band=band, venue=venue)
 
         # comment out the next two lines if using Exceptions
-        concert.venue = "My house"
-        assert concert.venue.name == "Theatre"
+        #concert.venue = "My house"
+        #assert concert.venue.name == "Theatre"
 
         assert isinstance(concert.venue, Venue)
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     concert.venue = "My house"
+        with pytest.raises(Exception):
+            concert.venue = "My house"
 
     def test_venue_is_mutable(self):
         """venue is mutable"""
@@ -103,8 +103,8 @@ class TestConcert:
         assert isinstance(concert.band, Band)
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     concert.band = "My friends"
+        with pytest.raises(Exception):
+             concert.band = "My friends"
 
     def test_band_is_mutable(self):
         """concert's band is mutable"""

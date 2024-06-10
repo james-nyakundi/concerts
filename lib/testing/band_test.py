@@ -23,12 +23,12 @@ class TestBand:
         assert band_1.name == "spicegurls"
 
         # comment out the next two lines if using Exceptions
-        band_1.name = 7
-        assert band_1.name == "spicegurls"
+       # band_1.name = 7
+        #assert band_1.name == "spicegurls"
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     band_1.name = 7
+        with pytest.raises(Exception):
+            band_1.name = 7
 
     def test_name_has_length(self):
         """names are longer than 0 characters"""
@@ -36,12 +36,12 @@ class TestBand:
         assert len(band_1.name) > 0
 
         # comment out the next two lines if using Exceptions
-        band_1.name = ""
-        assert band_1.name == "boygenius"
+        #band_1.name = ""
+        #assert band_1.name == "boygenius"
 
-        # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     band_1.name = ""
+        #uncomment the next two lines if using Exceptions
+        with pytest.raises(Exception):
+            band_1.name = ""
 
     def test_has_hometown(self):
         """Band is instantiated with a hometown"""
@@ -83,8 +83,8 @@ class TestBand:
         assert band_1.hometown == "NYC"
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     band_1.hometown = ""
+        with pytest.raises(Exception):
+            band_1.hometown = ""
 
     def test_concerts(self):
         """band has many concerts"""
